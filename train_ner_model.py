@@ -24,7 +24,7 @@ def train_ner_model():
         train_examples.append(example)
 
     optimizer = nlp.begin_training()
-    for epoch in range(40):  # More epochs for accuracy
+    for epoch in range(400):  # More epochs for accuracy
         random.shuffle(train_examples)
         losses = {}
         for example in train_examples:
