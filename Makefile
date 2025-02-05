@@ -7,3 +7,9 @@ b:
 	python train_ner_model.py
 	echo "step:3 Running test_ner_model.py ============================================="
 	python test_ner_model.py
+
+train:
+	echo "step:2 Running train_ner_model.py ============================================="
+	python train_ner_model.py
+	echo "step:3 Running test_ner_model.py ============================================="
+	python test_ner_model.py
