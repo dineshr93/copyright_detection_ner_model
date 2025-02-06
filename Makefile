@@ -13,3 +13,7 @@ train:
 	python train_ner_model.py
 	echo "step:3 Running test_ner_model.py ============================================="
 	python test_ner_model.py
+
+test:
+	echo "step:3 Running test_ner_model.py ============================================="
+	python test_ner_model.py
