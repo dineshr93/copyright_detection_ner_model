@@ -1,0 +1,1 @@
+This folder is required to store the generated ouput and input data for various scripts

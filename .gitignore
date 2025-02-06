@@ -2,3 +2,6 @@ venv
 input/*
 data/*
 model/*
+!model/Readme.txt
+!data/Readme.txt
+!input/Readme.txt
