@@ -48,6 +48,6 @@ COPY ./requirements.txt ./
 RUN pip install --upgrade pip setuptools wheel \
     && pip cache purge \
     && pip install -r requirements.txt || (pip cache purge && pip install -r requirements.txt)
-
+RUN pip install gradio
 # Default command
 CMD ["/bin/bash"]
