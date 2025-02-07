@@ -1,7 +1,35 @@
 {
 	"name": "Python 3 NER Copyright texts detection Pipeline",
-	"image": "docker.io/dineshr93/vsc-copyright_detection_model-dev:0.5"
-	// "image": "mcr.microsoft.com/devcontainers/python:1-3.10-bookworm",
-	// "postCreateCommand": "/bin/bash -c 'bash .devcontainer/setup.sh && pip install --upgrade pip setuptools wheel && pip cache purge && pip install -r requirements.txt || pip cache purge && pip install -r requirements.txt'"
-	// "postStartCommand": "pip install --upgrade pip setuptools wheel && pip cache purge && pip install -r requirements.txt || pip cache purge && pip install -r requirements.txt"
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": ".."
+	},
+	"workspaceFolder": "/home/vscode/workspace",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/home/vscode/workspace,type=bind,consistency=cached"
+	],
+	// "remoteUser": "vscode",
+	// "containerUser": "vscode",
+	"features": {},
+	// "postCreateCommand": "pip install --upgrade pip setuptools wheel && pip install -r /home/vscode/.local/bin/scancode-toolkit-v32.3.2/requirements.txt",
+	"postStartCommand": "scancode -h && extractcode -h",
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": []
+		}
+	}
 }
+// {
+// 	"name": "Python3 NER Copyright-texts-detection-Pipeline",
+// 	"image": "vsc-copyright_detection_model-dev:0.7",
+// 	// "image": "vsc-copyright_detection_model-dev.slim:latest",
+// 	// "remoteUser": "vscode",
+// 	// "containerUser": "vscode",
+// 	"workspaceFolder": "/home/vscode/workspace",
+// 	"postStartCommand": "scancode -h && extracode -h"
+// 	// "image": "docker.io/dineshr93/vsc-copyright_detection_model-dev:0.5"
+// 	// "image": "mcr.microsoft.com/devcontainers/python:1-3.10-bookworm",
+// 	// "postCreateCommand": "/bin/bash -c 'bash .devcontainer/setup.sh'"
+// 	// "postStartCommand": "pip install --upgrade pip setuptools wheel && pip cache purge && pip install -r requirements.txt || pip cache purge && pip install -r requirements.txt"
+// }

@@ -1,2 +1,2 @@
 npm install -g @devcontainers/cli
-devcontainer build --workspace-folder . --push true --image-name docker.io/dineshr93/vsc-copyright_detection_model-dev:0.5
+devcontainer build --workspace-folder . --push true --image-name docker.io/dineshr93/vsc-copyright_detection_model-dev:0.7

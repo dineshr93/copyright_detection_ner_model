@@ -44,7 +44,6 @@ rm -f "$TEMP_FILE"
 
 echo "ScanCode Toolkit installed successfully!"
 
-./scancode -h
-./extractcode -h
+pip install --upgrade pip setuptools wheel && pip cache purge && pip install -r requirements.txt || pip cache purge && pip install -r requirements.txt
 
 # echo "PATH=\"$PATH:$INSTALL_DIR\"" | sudo tee -a /etc/environment
