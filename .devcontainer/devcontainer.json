@@ -12,7 +12,7 @@
 	// "containerUser": "vscode",
 	"features": {},
 	// "postCreateCommand": "pip install --upgrade pip setuptools wheel && pip install -r /home/vscode/.local/bin/scancode-toolkit-v32.3.2/requirements.txt",
-	"postStartCommand": "scancode -h && extractcode -h",
+	"postStartCommand": "scancode -h && rm -rf /usr/local/bin/extractcode && extractcode -h",
 	"customizations": {
 		"vscode": {
 			"settings": {},
