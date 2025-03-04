@@ -160,7 +160,7 @@ def extract_entities_from_folder_openai(files):
     results["copyrights"] = uniqueList
 
            
-    return results
+    return ",".join(uniqueList)
 
 def process_files(files):
     # print(files)
@@ -172,7 +172,7 @@ def process_files(files):
 interface = gr.Interface(
     fn=process_files,
     inputs=gr.File(file_types=file_types,file_count="directory"),
-    outputs=gr.JSON(),
+    outputs=gr.Textbox(label="copyrights"),
     title="AI Copyright Detector",
     description="Upload a folder containing text files, and the model will detect copyright-related entities."
 )
