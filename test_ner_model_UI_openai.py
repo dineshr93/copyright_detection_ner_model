@@ -142,8 +142,8 @@ def message_gpt(prompt):
 def extract_entities_from_folder_openai(files):
     results = {}
     resultsList = []
-    if len(files) == 0:
-        sys.exit("No files are present!!")	
+    if files == None or len(files) == 0:
+        raise gr.Error("No files are present 💥!", duration=5)
     for single_file in files:
         file_name=os.path.basename(single_file)
         if os.path.isfile(single_file):
