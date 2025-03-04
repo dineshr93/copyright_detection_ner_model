@@ -6,3 +6,4 @@ model/*
 !data/Readme.txt
 !input/Readme.txt
 .gradio
+.env
