@@ -150,7 +150,7 @@ def extract_entities_from_folder_openai(files):
                 with open(single_file, "r", encoding="utf-8") as file:
                     text = file.read()
                     copyright = message_gpt(text)
-                    print(f"✅ Detected entities for {file_name}:")
+                    print(f"✅ Checking copyrights in {file_name}:")
                     # for ent in doc.ents:
                     #     print(f"{ent.text} ({ent.label_})")
                     # entities = [(ent.text, ent.label_) for ent in doc.ents]
