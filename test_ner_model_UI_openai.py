@@ -1,7 +1,7 @@
 import gradio as gr
 import spacy
+import sys
 import os
-import requests
 from dotenv import load_dotenv
 from openai import OpenAI
 load_dotenv(override=True)
@@ -142,6 +142,8 @@ def message_gpt(prompt):
 def extract_entities_from_folder_openai(files):
     results = {}
     resultsList = []
+    if len(files) == 0:
+        sys.exit("No files are present!!")	
     for single_file in files:
         file_name=os.path.basename(single_file)
         if os.path.isfile(single_file):
