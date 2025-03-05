@@ -17,7 +17,9 @@ git clone git@github.com:dineshr93/copyright_detection_ner_model.git && cd copyr
 pip install -r requirements.txt
 make b #starts the pipeline
 ```
+## NER Model Training Flow
 
+![NER Model Training Flow](misc/updated_flow.png)
 
 ## License
 Copyright (c) 2025 Dinesh Ravi
